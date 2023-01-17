@@ -5,9 +5,9 @@ import os
 import random
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secretkey'
-app.config['DEBUG'] = True
-app.config['HOST'] = '0.0.0.0'
+app.config['SECRET_KEY'] = 'Y0L379iswHNAB9LdkmBXePZyz5dcB'
+# app.config['DEBUG'] = True
+# app.config['HOST'] = '0.0.0.0'
 
 socketio = SocketIO(app)
 
@@ -67,11 +67,11 @@ def receive_message(json):
     emoticons_array = [':' + item + ':' for item in emoticons_array]
     emoticons = ''.join(emoticons_array)
 
-
     if return_tekst:
         emit('from server', f'{return_tekst} {emoji.emojize(emoticons)}')
     else:
         emit('from server', emoji.emojize(emoticons))
 
+
 if __name__ == '__main__':
-    socketio.run(app, host="0.0.0.0")
+    socketio.run(app)
