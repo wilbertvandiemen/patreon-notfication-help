@@ -1,0 +1,40 @@
+/*
+.row {
+	margin: 0 auto;
+	width: 60%;
+}
+
+
+.column {
+	float: left;
+	margin-left: 25px;
+	margin-top: 25px;
+}
+*/
+
+
+body {
+	margin-top: 40px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+input#emoticons, #result {
+    font-size: 150%;
+    width: 400px
+}
+
+.resultaat{
+    text-align: center;
+}
+
+#result {
+    height: 400px;
+    margin-top: 40px;
+}
+
+h3 {
+	border-bottom: 2px solid red;
+	text-align: left;
+}
