@@ -33,7 +33,7 @@
     <div class="col">
     <h3>Teksten</h3>
     <div class="row">
-        {% for item in range(0,2) %}
+        {% for item in range(0,3) %}
          <div class="col">
     {% for tekst in teksten[item] %}
     <p>
@@ -45,12 +45,8 @@
     </div>
     <h3>Emoticons</h3>
     <p>
-    <input id="emoticons" value="{{emoticons}}">
+    <input id="emoticons" value="{{emoticons}}"> <button class="btn btn-success" id="send">En gaan!</button>
     </p>
-    <p class="button-p">
-        <button class="btn btn-success" id="send">En gaan!</button>
-    </p>
-
     </div>
 
     </div>

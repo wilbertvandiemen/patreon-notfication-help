@@ -32,9 +32,9 @@ def index():
     regels = data.split("\n")
     data_into_list = [{"id":item.split(";")[0], "tekst":item.split(";")[1]} for item in regels]
 
-    gedeelte = int((len(data_into_list)+1)/2)
+    gedeelte = int((len(data_into_list)+2)/3)
     # print(gedeelte)
-    teksten_in_tweeen = list(chunks(data_into_list, gedeelte))
+    teksten_in_drieen = list(chunks(data_into_list, gedeelte))
 
 
     with open('data/emoticons.txt', mode="r") as bestand:
@@ -51,7 +51,7 @@ def index():
     # pprint.pprint(list(in_drieen))
     # print(in_drieen[0])
 
-    return render_template('index.html', emoticons=emoji.emojize(emoticons), patrons=in_drieen, teksten=teksten_in_tweeen)
+    return render_template('index.html', emoticons=emoji.emojize(emoticons), patrons=in_drieen, teksten=teksten_in_drieen)
 
 @app.route('/favicon.ico')
 def favicon():
@@ -67,8 +67,8 @@ def receive_message(json):
 
     with open('data/teksten.txt') as bestand:
         data = bestand.read()
-        data_into_list = data.split("\n")
 
+    data_into_list = data.split("\n")
     teksten = [item.split(";")[1] for item in data_into_list]
 
     return_tekst = ''

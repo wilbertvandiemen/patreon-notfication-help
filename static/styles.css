@@ -48,8 +48,13 @@ h3 {
 .btn {
 padding-left: 1.5rem;
 padding-right: 1.5rem;
+margin-left: 40px;
+	margin-top: 2px;
+	display: inline-flex;
+	position: absolute;
+
 }
 
-.button-p{
-text-align:center;
+label {
+	font-size: .9rem;
 }
