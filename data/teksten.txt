@@ -1,10 +1,10 @@
-Beautifully said, @@! Thank you so much!
-Thank you so much, @@!
-Thank you so much for your kind words, @@!
-Thank you so much, @@! I'm glad you like it!
-Thanks, @@!
-<<alleen emoticons>>
-You're very welcome, as always @@.
-Thank you very much for your kind compliments, @@!
-Thank you for your kind compliment, @@!
-Who knows...
+0;Beautifully said, @@! Thank you so much!
+1;Thank you so much, @@!
+2;Thank you so much for your kind words, @@!
+3;Thank you so much, @@! I'm glad you like it!
+4;Thanks, @@!
+5;<<alleen emoticons>>
+6;You're very welcome, as always @@.
+7;Thank you very much for your kind compliments, @@!
+8;Thank you for your kind compliment, @@!
+9;Who knows...

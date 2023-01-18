@@ -12,27 +12,47 @@
 <div class="row">
 <div class="col">
     <h3>Patrons</h3>
-    {% for patron in patrons %}
+    <div class="row">
+    {% for item in range(0,3) %}
+        <div class="col">
+        {% for patron in patrons[item] %}
     <p>
-    <label><input class="naam" type="radio" name="naam" value="{{ patron }}">{{ patron }}</label>
+    <label><input class="naam" type="radio" name="naam" value="{{ patron.naam }}">{{ patron.naam }}</label>
     </p>
     {% endfor%}
+    </div> <!-- einde deel kolom patrons -->
+        {% endfor%}
+    </div> <!-- einde row patrons -->
+</div> <!-- einde kolom patrons -->
+    <div class="col resultaat">
+        <h3>Resultaat (ook in kladblok)</h3>
+        <textarea id="result"></textarea>
+    </div>
+</div> <!-- einde rij patrons en resultaat -->
+<div class="row">
+    <div class="col">
     <h3>Teksten</h3>
-    {% for tekst in teksten %}
+    <div class="row">
+        {% for item in range(0,2) %}
+         <div class="col">
+    {% for tekst in teksten[item] %}
     <p>
-    <label><input class="tekst" type="radio" name="tekst" value="{{ loop.index - 1 }}">{{ tekst }}</label>
+    <label><input class="tekst" type="radio" name="tekst" value="{{ tekst.id }}">{{ tekst.tekst }}</label>
     </p>
     {% endfor%}
+    </div>
+        {% endfor%}
+    </div>
     <h3>Emoticons</h3>
     <p>
     <input id="emoticons" value="{{emoticons}}">
     </p>
-    <button id="send">Stuur</button>
+    <p class="button-p">
+        <button class="btn btn-success" id="send">En gaan!</button>
+    </p>
+
     </div>
-    <div class="col resultaat">
-        <h3>Resultaat (ook in kladblok)</h3>
-    <textarea id="result"></textarea>
-    </div>
+
     </div>
 </div>
     <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
