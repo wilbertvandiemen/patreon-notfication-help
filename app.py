@@ -94,7 +94,7 @@ def receive_message(json):
     emoticons_array = [':' + item + ':' for item in emoticons_array]
     emoticons = ''.join(emoticons_array)
 
-    return_tekst += request.remote_addr
+    # return_tekst += request.remote_addr
 
     if return_tekst:
         emit('from server', f'{return_tekst} {emoji.emojize(emoticons)}')
