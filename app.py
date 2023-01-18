@@ -22,6 +22,10 @@ def chunks(lst, n):
 
 @app.route('/')
 def index():
+
+    if request.remote_addr != '77.173.18.159' and request.remote_addr != '127.0.0.1':
+        return '*** !!! ***'
+
     with open('data/teksten.txt') as bestand:
         data = bestand.read()
 
